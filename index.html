@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('b284ffb8bd757e4e1d8cc0813424cb7b');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '예수의 죽음을 기념하는 행사',
+        description: '예수의 죽음을 기념하는 행사에 초대합니다. (약 1시간)',
+        imageUrl:
+          'https://cms-imgp.jw-cdn.org/img/p/1102024385/univ/art/1102024385_univ_cnt_1_xl.jpg',
+        link: {
+          mobileWebUrl: 'https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/memorial/',
+          webUrl: 'https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/memorial/',
+        },
+      },
+      
+      },
+      buttons: [
+        {
+          title: '2024.03.24.(일) 오후 8:40 용호북부회중',
+          link: {
+            mobileWebUrl: 'https://apps.jw.org/ui/KO/meeting-search.html#/?m=C334EA0A-D818-424A-B96B-461717DCF026445150',
+            webUrl: 'https://apps.jw.org/ui/KO/meeting-search.html#/?m=C334EA0A-D818-424A-B96B-461717DCF026445150',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
